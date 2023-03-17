@@ -12,6 +12,7 @@
 		<meta name="Description" content="Este site promove um ensino bíblico para pessoas que desejam buscar mais a Deus.">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="manifest" href="manifest.json">
 	</head>
 	<body class="is-preload">
 
@@ -21,7 +22,7 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<span class="icon fa-book-reader"></span>
+							<span class="icon fa-book-open"></span>
 						</div>
 						<div class="content">
 							<div class="inner">
@@ -360,6 +361,35 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			    <script>
+    let newWorker;
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js').then(reg => {
+        reg.addEventListener('updatefound', () => {
+          // A wild service worker has appeared in reg.installing!
+          newWorker = reg.installing;
+          newWorker.addEventListener('statechange', () => {
+            // Has network.state changed?
+            switch (newWorker.state) {
+              case 'installed':
+                if (navigator.serviceWorker.controller) {
+
+                }
+                // No update available
+                break;
+            }
+          });
+        });
+      });
+      let refreshing;
+      navigator.serviceWorker.addEventListener('controllerchange', function () {
+        if (refreshing) return;
+        window.location.reload();
+        refreshing = true;
+      });
+    }
+  </script>
 
 	</body>
 </html>
