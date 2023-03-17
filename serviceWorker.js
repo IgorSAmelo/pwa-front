@@ -58,7 +58,7 @@ self.addEventListener('install', event => {
         './assets/images/icons/32.png',
         './assets/images/icons/29.png',
         './assets/images/icons/20.png',
-        './assets/images/icons/16.png'
+        './assets/images/icons/16.png',
 
     
 

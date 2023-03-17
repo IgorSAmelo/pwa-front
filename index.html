@@ -13,6 +13,19 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="manifest" href="manifest.json">
+		<link rel="apple-touch-icon" href="assets/images/icon/72.png" />
+<link rel="apple-touch-icon" href="assets/images/icon/20.png" />
+<link rel="apple-touch-icon" href="assests/images/icon/16.png" />
+<link rel="apple-touch-icon" href="assets/images/icon/128.png" />
+<link rel="apple-touch-icon" href="assets/images/icon/144.png" />
+<link rel="apple-touch-icon" href="assets/images/icon/152.png" />
+<link rel="apple-touch-icon" href="assets/images/icon/192.png" />
+<link rel="apple-touch-icon" href="assets/images/icon/384.png" />
+<link rel="apple-touch-icon" href="assets/images/icon/512.png" />
+<link rel="apple-touch-icon" href="assets/images/icon/1024.png" />
+
+<meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+<meta name="theme-color" content="#db4938" />
 	</head>
 	<body class="is-preload">
 
@@ -365,7 +378,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			    <script>
     let newWorker;
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js').then(reg => {
+      navigator.serviceWorker.register('/serviceWorker.js').then(reg => {
         reg.addEventListener('updatefound', () => {
           // A wild service worker has appeared in reg.installing!
           newWorker = reg.installing;
