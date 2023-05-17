@@ -86,7 +86,7 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contato</h2>
-								<form method="post" action="#">
+								<div>
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Nome</label>
@@ -102,10 +102,18 @@
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Enviar Mensagem " class="primary" /></li>
+										<li>
+											<button 
+												type="submit" 
+												class="primary" 
+												onclick="createMessage()"
+												>Enviar Mensagem
+											</button>
+										</li>
+											
 										<li><input type="reset" value="Resetar" /></li>
 									</ul>
-								</form>
+								</div>
 								<ul class="icons">
 									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
@@ -306,7 +314,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 								<section>
 									<h3 class="major">Form</h3>
-									<form method="post" action="#">
+									<form>
 										<div class="fields">
 											<div class="field half">
 												<label for="demo-name">Name</label>
@@ -348,7 +356,10 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 											</div>
 										</div>
 										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li>
+												<button type="submit" class="primary" id="btn-submit">
+													Send Message
+												</button>  /></li>
 											<li><input type="reset" value="Reset" /></li>
 										</ul>
 									</form>
@@ -374,6 +385,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="./index.js"></script>
 
 			    <script>
     let newWorker;
