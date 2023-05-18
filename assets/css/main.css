@@ -51,9 +51,6 @@ table {
 	border-spacing: 0;
 }
 
-body {
-	-webkit-text-size-adjust: none;
-}
 
 mark {
 	background-color: transparent;
@@ -74,9 +71,6 @@ input, select, textarea {
 
 /* Basic */
 
-	@-ms-viewport {
-		width: device-width;
-	}
 
 	@media screen and (max-width: 480px) {
 
@@ -1659,3 +1653,9 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+		.space {
+			padding-bottom: 1rem;
+			
+			
+		} 

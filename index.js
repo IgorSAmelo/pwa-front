@@ -17,7 +17,8 @@ function createMessage() {
         })
     .then((resp) => resp.json())
     .then((data) => {
-        console.log(data)
+        console.log(data) 
+        alert("Mensagem Enviada com Sucesso!")
     })
     .catch((err) => console.log(err));
 }
